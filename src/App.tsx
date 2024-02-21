@@ -1,33 +1,27 @@
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Router from './routes/sections';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { typography } from './theme/typography';
-import { useMemo } from 'react';
-import { palette } from './theme/palette';
-import { shadows } from './theme/shadows';
-import { customShadows } from './theme/custom-shadows';
-
+// import { ThemeProvider, createTheme } from '@mui/material/styles';
+// import { useMemo } from 'react';
+// import 'modern-normalize';
+import './App.css'
+import './assets/typography.css'
 
 
 const App = () => {
+  const theme = createTheme({
 
-  const memoizedValue: any = useMemo(
-    () => ({
-      palette: palette(),
-      typography, 
-      shadows: shadows(),
-      customShadows: customShadows(),
-      shape: { borderRadius: 8 },
-    }),
-    []
-  );
-  
-  const theme = createTheme(memoizedValue);  
+  });
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router />
-    </ThemeProvider>
+    < >
+
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Router />
+      </ThemeProvider>
+
+
+    </>
   );
 }
 

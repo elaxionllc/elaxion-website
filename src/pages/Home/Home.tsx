@@ -1,16 +1,18 @@
-import HeroComponent from "../../components/Hero/HeroComponent";
-import Footer from "./Footer/footer";
-import Hero from "./Hero/Hero";
-import ServicePreview from "./ServicePreview/ServicePreview";
+import Hero from '../../components/Home/Hero/Hero';
+import OurProcess from '../../components/Home/OurProcess/OurProcess';
+import Services from '../../components/Home/Services/Services';
+import Stats from '../../components/Home/Stats/Stats';
 
 const Home = () => {
-  return (
-    <>
-      <Hero />
-      <ServicePreview />
-      <Footer />
-    </>
-  );
-};
+    return (
+        <>
+            <Hero />
+            < Stats />
+
+            <Services />
+
+        </>
+    )
+}
 
 export default Home;

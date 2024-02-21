@@ -1,0 +1,55 @@
+/* BouncingArrow.css */
+/* :root {
+  --arrow-position: -119px
+}
+
+@media screen and (max-height: 1536px) {
+  :root {
+    --arrow-position: -350px
+  }
+}
+
+@media screen and (max-height: 1200px) {
+  :root {
+    --arrow-position: -350px
+  }
+}
+
+@media screen and (max-height: 900px) {
+  :root {
+    --arrow-position: -170px
+  }
+}
+
+@media screen and (max-height: 600px) {
+  :root {
+    --arrow-position: -170px
+  }
+}
+
+@media screen and (max-height: 0px) {
+  :root {
+    --arrow-position: -100px
+  }
+} */
+
+
+
+.bouncing-arrow {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  animation: bounce 1s infinite alternate;
+  position: absolute;
+  left: 45%;
+  bottom: 10px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px); /* Adjust the bounce height as needed */
+  }
+}

@@ -2,13 +2,11 @@ import { Suspense } from "react";
 import { useRoutes, Outlet } from "react-router-dom";
 
 import Home from "../pages/Home/Home";
-import Home2 from "../pages/Home2/Home2";
+import Services from "../pages/Services/Services";
+import About from "../pages/About/About";
+import Consult from "../pages/About/Consult";
+import Contact from "../pages/Contact/Contact";
 import Navbar from "../components/navbar/navbar";
-import Consulatation from "../pages/About/Consultation/consultation";
-import Consulation2 from "../pages/About/Consultation/consultation2";
-import Services from "../pages/About/Services/Services";
-
-// import About from "../components/About/About";
 
 const Router = () => {
   const routes = useRoutes([
@@ -39,20 +37,17 @@ const Router = () => {
         },
         {
           path: "about",
+          element: <About />,
           children: [
             {
-              path:"",
-              element: <div>About</div>,
-            },
-            {
               path:"consulting",
-              element:<Consulation2 />
+              element:<Consult />
             }
           ],
         },
         {
           path: "contact",
-          element: <div>Product</div>,
+          element: <Contact />,
         },
         {
           path: "Services",

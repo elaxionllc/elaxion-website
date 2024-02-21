@@ -1,0 +1,175 @@
+:root {
+    --color--dark: #141414;
+    --font--body: Satoshi, sans-serif;
+    --color--light: #fffcf3;
+    --type--body-regular: 20px;
+    --font--headings: Marcellus, sans-serif;
+    --type--h1: 92px;
+    --type--h2: 54px;
+    --type--h3: 32px;
+    --color--elevation: #20201f;
+    --color--fade-out: #898883;
+    --type--body-small: 18px;
+    --type--subtitle: 32px;
+    --white: white;
+    --black: black;
+  }
+  
+
+@font-face {
+  font-family: "Marcellus";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a891ffccc1080653c0bb3c_Marcellus-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a892390684caa57be6e94e_Satoshi-Black.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923a25aab2dd735f4e7d_Satoshi-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923abf251cf0929ce79b_Satoshi-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923ad9b638fab24ad429_Satoshi-BoldItalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923a54760aec6043ecd7_Satoshi-LightItalic.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923a712368d0a1c06099_Satoshi-Italic.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923aba6c54f1deafb8b5_Satoshi-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923aba6c54f1deafb8b9_Satoshi-BlackItalic.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923a1fa1d3ee6e82cae1_Satoshi-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://assets.website-files.com/65a8909da9cf99aabbbbcd57/65a8923a2e26aeb25b852c45_Satoshi-MediumItalic.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+h1 {
+  font-family: var(--font--headings);
+  font-size: var(--type--h1);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 115%;
+}
+
+h2 {
+  font-family: var(--font--headings);
+  font-size: var(--type--h2);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+h3 {
+  font-family: var(--font--headings);
+  font-size: var(--type--h3);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+h4 {
+  font-family: var(--font--headings);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+h5 {
+  font-family: var(--font--headings);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+h6 {
+  font-family: var(--font--headings);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 479px) {
+  h1 {
+    font-size: 43px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  blockquote {
+    padding: 40px 40px 40px 32px;
+    font-size: 25px;
+  }
+}
