@@ -49,7 +49,7 @@ const Image = styled('img')({
   transformStyle: 'preserve-3d',
 });
 
-const YourComponent = () => {
+const OurProcess = () => {
   return (
     <Section className="section relative padding-top-180">
       <MainContainer className="w-layout-blockcontainer main-container w-container">
@@ -103,4 +103,4 @@ const YourComponent = () => {
   );
 };
 
-export default YourComponent;
+export default OurProcess;

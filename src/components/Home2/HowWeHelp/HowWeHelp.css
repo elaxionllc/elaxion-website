@@ -1,0 +1,7 @@
+.help-item:nth-of-type(odd){
+    flex-direction: row;
+}
+
+.help-item:nth-of-type(even){
+    flex-direction: row-reverse;
+}

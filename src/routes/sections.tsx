@@ -1,12 +1,13 @@
 import { Suspense } from "react";
 import { useRoutes, Outlet } from "react-router-dom";
 
-import Home from "../pages/Home/Home";
+import * as h from "../pages/Home/Home";
+import Home from "../pages/Home2/Home";
 import Services from "../pages/Services/Services";
 import About from "../pages/About/About";
 import Consult from "../pages/About/Consult";
 import Contact from "../pages/Contact/Contact";
-import Navbar from "../components/navbar/navbar";
+import Navbar2 from "../components/navbar/navbar";
 
 const Router = () => {
   const routes = useRoutes([
@@ -14,7 +15,7 @@ const Router = () => {
       element: (
         <>
           <Suspense>
-            <Navbar />
+            <Navbar2 />
             <Outlet />
           </Suspense>
         </>
@@ -24,6 +25,16 @@ const Router = () => {
           path: "",
           element: <Home />,
           index: true,
+        },
+        {
+          path: "home2",
+          // index: true,
+          children: [
+            {
+              path:"",
+              element: <h.default />,
+            }
+          ],
         },
         {
           path: "home",
