@@ -1,106 +1,178 @@
-import React from 'react';
-import { styled } from '@mui/system';
-import { Container } from '@mui/material';
+import { Container, styled } from "@mui/system"
+import * as g from './assets/growth.png'
 
-const Section = styled('section')({
-  // Your section styles here
-});
 
-const MainContainer = styled(Container)({
-  // Your main container styles here
-});
+const InfoItem = (
+    { number, title, children }:
+        { number: string, title: string, children: string }) => {
 
-const CenterHeading = styled('div')({
-  // Your center heading styles here
-  opacity: 1,
-  transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
-  transformStyle: 'preserve-3d',
-});
+    const InfoContainer = styled('div')((props)=>({
+        display: 'flex',
+        flexDirection: 'column',
+        fontFamily: "Montserrat, sans-serif",
+        minHeight: '240px',
 
-const TextProcessFourNumber = styled('div')({
-  // Your text process four number styles here
-});
+        borderTopWidth: "2.5px",
+        borderTopStyle: "solid",
+        borderColor: "#e6e0f1",
+        paddingTop: "23px",
+        paddingBottom: "30px",
 
-const WrapCirclesProcess = styled('div')({
-  // Your wrap circles process styles here
-});
+        [props.theme.breakpoints.down('sm')]: {
+            minHeight: 'inherit',
+        }
+    }))
 
-const CircleProcessFourths = styled('div')({
-  // Your circle process fourths styles here
-});
+    const TopContainer = styled('div')({
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: "flex-start",
+        alignItems: "center",
+        marginBottom: "16px",
+    })
 
-const LineCirclesProcessFourths = styled('div')({
-  // Your line circles process fourths styles here
-});
+    const TitleContainer = styled('h5')({
+        color: "#000",
+        marginTop: 0,
+        marginBottom: 0,
+        fontSize: "14px",
+        fontWeight: 700,
+        lineHeight: "140%",
+        letterSpacing: "4px",
+        textTransform: "uppercase",
+    })
 
-const BottomProcessFourths = styled('div')({
-  // Your bottom process fourths styles here
-});
+    const NumberContainer = styled('div')({
+        WebkitTextFillColor: "transparent",
+        backgroundImage: "linear-gradient(84deg, #aebfe3, #eda69d 54%, #efc08a)",
+        backgroundClip: "text",
+        marginRight: "16px",
+        fontSize: "48px",
+        fontWeight: 700,
+        lineHeight: "56px",
+    })
 
-const AbstractSectionTopLeft = styled('div')({
-  // Your abstract section top left styles here
-});
+    const BottomContainer = styled('div')({
+        fontSize: "16px",
+        fontWeight: 400,
+        lineHeight: "140%",
+    })
 
-const Image = styled('img')({
-  // Your image styles here
-  willChange: 'filter, transform',
-  filter: 'blur(0.0005px)',
-  transform: 'translate3d(0px, 59.94px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
-  transformStyle: 'preserve-3d',
-});
+
+    return (
+        <InfoContainer>
+            <TopContainer>
+                <NumberContainer>{number}</NumberContainer>
+                <TitleContainer>{title}</TitleContainer>
+            </TopContainer>
+            <BottomContainer>
+                {children}
+            </BottomContainer>
+        </InfoContainer>
+    )
+}
 
 const OurProcess = () => {
-  return (
-    <Section className="section relative padding-top-180">
-      <MainContainer className="w-layout-blockcontainer main-container w-container">
-        <CenterHeading className="center-heading mg-bottom-100">
-          <h2 className="no-margins">
-            Our <span className="text-fade-out">bulletproof</span> process
-          </h2>
-        </CenterHeading>
-        <div className="w-layout-grid grid-process-fourths" style={{ opacity: 1 }}>
-          <TextProcessFourNumber className="text-process-four-number">01</TextProcessFourNumber>
-          <TextProcessFourNumber className="text-process-four-number">02</TextProcessFourNumber>
-          <TextProcessFourNumber className="text-process-four-number">03</TextProcessFourNumber>
-          <TextProcessFourNumber className="text-process-four-number">04</TextProcessFourNumber>
-          <WrapCirclesProcess className="wrap-circles-process">
-            <CircleProcessFourths className="circle-process-fourths"></CircleProcessFourths>
-            <CircleProcessFourths className="circle-process-fourths"></CircleProcessFourths>
-            <CircleProcessFourths className="circle-process-fourths"></CircleProcessFourths>
-            <CircleProcessFourths className="circle-process-fourths"></CircleProcessFourths>
-            <LineCirclesProcessFourths className="line-circles-process-fourths"></LineCirclesProcessFourths>
-          </WrapCirclesProcess>
-          <BottomProcessFourths className="bottom-process-fourths">
-            <h3 className="no-margins">Research</h3>
-            <div className="paragraph-small">
-              Donec sodales sagittis magna. Cras dapibus. Praesent ut ligula non mi varius sagittis.
-            </div>
-          </BottomProcessFourths>
-          <BottomProcessFourths className="bottom-process-fourths">
-            <h3 className="no-margins">Design</h3>
-            <div className="paragraph-small">
-              Donec sodales sagittis magna. Cras dapibus. Praesent ut ligula non mi varius sagittis.
-            </div>
-          </BottomProcessFourths>
-          <BottomProcessFourths className="bottom-process-fourths">
-            <h3 className="no-margins">Develop</h3>
-            <div className="paragraph-small">
-              Donec sodales sagittis magna. Cras dapibus. Praesent ut ligula non mi varius sagittis.
-            </div>
-          </BottomProcessFourths>
-          <BottomProcessFourths className="bottom-process-fourths">
-            <h3 className="no-margins">Maintain</h3>
-            <div className="paragraph-small">
-              Donec sodales sagittis magna. Cras dapibus. Praesent ut ligula non mi varius sagittis.
-            </div>
-          </BottomProcessFourths>
-        </div>
-      </MainContainer>
-      <AbstractSectionTopLeft className="wrap-abstract-section-top-left small">
-        <Image src="./Home A _ Futur Studio - Webflow Ecommerce website template_files/65a8d001ff230bd1f7938a4f_Abstract Home 3.webp" loading="lazy" alt="" className="abstract-hero-home-a" />
-      </AbstractSectionTopLeft>
-    </Section>
-  );
-};
+    const ProcessContainer = styled(Container)({
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: 'rgb(237 239 242)',
+        paddingTop: '32px',
+        paddingBottom: '32px',
+        // marginBottom: '100px',
+    })
 
-export default OurProcess;
+    const Title = styled('h2')((props) => ({
+        textTransform: "uppercase",
+        marginTop: 0,
+        marginBottom: "16px",
+        fontSize: "30px",
+        textAlign: 'center',
+        fontFamily: 'playfair, sans-serif',
+        fontWeight: 300,
+        paddingBottom: '50px',
+        lineHeight: '35px',
+
+        [props.theme.breakpoints.down('sm')]: {
+            letterSpacing: ' -1px'
+        }
+
+    }));
+
+    const SectionContainer = styled(Container)((props)=>({
+        display: 'flex',
+        flexDirection: 'row',
+        gap: "30px",
+        paddingLeft: "10px",
+        paddingRight: '10px',
+
+        [props.theme.breakpoints.down('lg')]:{
+            gap: "60px",
+        },
+
+        [props.theme.breakpoints.down('sm')]:{
+            flexDirection: 'column',
+        },
+    }))
+
+    const LeftContainer = styled('div')({
+        display: 'flex',
+        flexDirection: 'column',
+        flex: '1',
+    })
+
+    const RightContainer = styled('div')({
+        display: 'flex',
+        flexDirection: 'column',
+        flex: '1',
+    })
+
+    const MiddleContainer = styled('div')((props)=>({
+        display: 'flex',
+        flex: '1',
+
+        [props.theme.breakpoints.down('lg')]:{
+            display: 'none',
+        }
+    }))
+
+
+    const MiddleImage = styled('img')({
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        objectPosition: "50% 50%",
+        borderRadius: "18px",
+
+    })
+
+    return (
+        <ProcessContainer maxWidth={false}>
+            <Title>Our Bullet-proof process</Title>
+            <SectionContainer maxWidth={'lg'}>
+                <LeftContainer>
+                    <InfoItem number={"01"} title={'Discover'}>
+                        We start by chatting with you and diving deep into what makes your business tick. We want to understand your challenges, goals, and dreams. Think of it as our detective phase – we're on a mission to uncover insights that will shape our game plan.
+                    </InfoItem>
+                    <InfoItem number={"02"} title={'Define'}>
+                        Once we've got the lowdown from you, it's time to put our thinking caps on. We'll sketch out a tailor-made solution that fits your needs like a glove. Our aim? To create something sleek, user-friendly, and totally customized just for you.
+                    </InfoItem>
+                </LeftContainer>
+                <MiddleContainer>
+                    <MiddleImage src={g.default} />
+                </MiddleContainer>
+                <RightContainer>
+                    <InfoItem number={"03"} title={'Develop'}>
+                        Now it's time to roll up our sleeves and get to work. Our team of tech wizards will bring your vision to life, piece by piece. We'll use the latest tools and techniques to build, test, and refine until everything is just right.
+                    </InfoItem>
+                    <InfoItem number={"04"} title={'Deliver'}>
+                        Last but not least, we'll hand over the keys to your shiny new solution. But our job doesn't stop there. We'll stick around to make sure everything runs smoothly and offer support whenever you need it. Consider us your trusty sidekicks on your journey to success.
+                    </InfoItem>
+                </RightContainer>
+            </SectionContainer>
+
+        </ProcessContainer>
+    )
+}
+
+export default OurProcess

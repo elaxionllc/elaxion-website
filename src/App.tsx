@@ -1,41 +1,19 @@
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-import Router from './routes/sections';
-// import { ThemeProvider, createTheme } from '@mui/material/styles';
-// import { useMemo } from 'react';
-// import 'modern-normalize';
 import './App.css'
-import './assets/typography.css'
-import { createBreakpoints } from '@mui/system';
+import Router from './routes/routes';
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react';
 
 
 const App = () => {
-  const breakpoints = createBreakpoints({})
-  const theme = createTheme({
-    typography: {
-      h1: {
-        fontFamily: "var(--font--headings)",
-        fontSize: "var(--type--h1)",
-        marginTop: "0",
-        marginBottom: "0",
-        fontWeight: "400",
-        lineWeight: "115%",
-      },
-      h2: {
-        fontFamily: "var(--font--headings)",
-        fontSize: "var(--type--h2)",
-        color: "var(--color--fade-out)",
-        marginTop: "20px",
-        marginBottom: "10px",
-        fontWeight: "400",
-        lineHeight: "110%"
-      },
-      h3: {
-        fontSize: "var(--type--h3)",
-        fontWeight: "300",
-        lineWeight: "125%"
-      }
-    }
-  });
+  const theme = createTheme();
+  const { pathname, state } = useLocation();
+
+  useEffect(() => {
+    const pageSource = state?.scrollTo;
+    if (pageSource != null) return;
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
     < >
@@ -47,7 +25,7 @@ const App = () => {
 
 
     </>
-  );
+  )
 }
 
 export default App

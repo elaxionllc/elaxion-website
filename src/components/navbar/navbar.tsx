@@ -3,7 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import logo2 from "../../assets/logo/icon-text-sidebyside-no-shadow-logo.png";
 import { Container } from '@mui/material';
 
-export default function DenseAppBar() {
+const Navbar = () => {
   return (
     <AppBar position="static" elevation={0} sx={{ backgroundColor: 'white' }}>
       <Container maxWidth={'lg'}>
@@ -15,3 +15,5 @@ export default function DenseAppBar() {
     </AppBar>
   );
 }
+
+export default Navbar
