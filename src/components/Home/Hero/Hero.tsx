@@ -14,6 +14,7 @@ const HeroSection = styled(Container)({
   justifyContent: 'center',
 
   height: "calc(100vh - 63.99px)",
+  border: 'none',
 
 });
 
