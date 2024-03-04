@@ -30,10 +30,22 @@ env:
   NODE_VERSION: '18.x'                      # set this to the node version to use (e.g. '8.x', '10.x', '12.x')
 
 jobs:
+
   build-and-deploy:
     runs-on: ubuntu-latest # For Linux, use ubuntu-latest
     environment: dev
     steps:
+    #- name: Azure Login
+    #  uses: Azure/login@v1.6.        
+     # with:
+     #     auth-type: IDENTITY
+     #     client-id: ${{ secrets.AZURE_CLIENT_ID }}          
+     #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+     #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+     #     enable-AzPSSession: true1
+      
+
+            
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v3
 
@@ -53,7 +65,7 @@ jobs:
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         npm install
-        npm run build --if-present
+        npm run build -- --mode production
         npm run test --if-present
         popd
 
