@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitTextJS from 'split-text-js';
 import Contact from '../../Contact/Contact';
 import { useState } from 'react';
+import * as i from './colorful-lock.png'
 
 const HeroSection = styled(Container)({
   display: 'flex',
@@ -21,6 +22,12 @@ const HeroSectionWrapper = styled(Container)({
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
+  // backgroundImage: `url(${i.default})`,
+  backgroundImage: `radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%),url('${i.default}')`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center top',
+  border: 'none',
 });
 
 const Title = styled('h1')((props) => ({
@@ -78,11 +85,13 @@ const StyledButton = styled(Button)({
 // })
 
 const StyledModal = styled(Modal)({
-
+  height: 'auto',
   display: 'flex',
-  alignItems: 'center',
+  // alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '10px',
+  bottom: 'inherit',
+
 })
 
 
@@ -247,16 +256,28 @@ const HeroComponent = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <HeroSection maxWidth={'xl'}>
-      <HeroSectionWrapper maxWidth={'lg'}>
-        <Title className='title'>Unlock Your Potential</Title>
-        <Subtitle className="subTitle">Empowering Your Business With Innovation</Subtitle>
-        <ButtonContainer>
-          <StyledButton className='letsTalk' variant="contained" onClick={handleOpen}>
-            <span style={{ minWidth: '180px' }} className='buttonText'>Let's Talk!</span>
-          </StyledButton>
-        </ButtonContainer>
-        {/* <ServiceAnimation className="service-animation">
+    <>
+      <StyledModal
+        className='my-modal'
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="Let's talk!"
+        aria-describedby="Let's talk!"
+      >
+        <>
+          <Contact closeClicked={handleClose} />
+        </>
+      </StyledModal>
+      <HeroSection maxWidth={'xl'}>
+        <HeroSectionWrapper maxWidth={'lg'}>
+          <Title className='title'>Unlock Your Potential</Title>
+          <Subtitle className="subTitle">Empowering Your Business With Innovation</Subtitle>
+          <ButtonContainer>
+            <StyledButton className='letsTalk' variant="contained" onClick={handleOpen}>
+              <span style={{ minWidth: '180px' }} className='buttonText'>Let's Talk!</span>
+            </StyledButton>
+          </ButtonContainer>
+          {/* <ServiceAnimation className="service-animation">
           <SAItem>Software Development</SAItem>
           <SAItem>Cloud Integration</SAItem>
           <SAItem>DevOps</SAItem>
@@ -276,17 +297,9 @@ const HeroComponent = () => {
           <SAItem>Cloud Storage</SAItem>
           <SAItem>Disaster Recoverty</SAItem>
         </ServiceAnimation> */}
-      </HeroSectionWrapper>
-      <StyledModal
-        className='my-modal'
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="Let's talk!"
-        aria-describedby="Let's talk!"
-      >
-        <Contact closeClicked={handleClose} />
-      </StyledModal>
-    </HeroSection>
+        </HeroSectionWrapper>
+      </HeroSection>
+    </>
   );
 };
 

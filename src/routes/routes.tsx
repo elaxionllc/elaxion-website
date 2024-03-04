@@ -40,16 +40,16 @@ const Router = () => {
             }
           ],
         },
-        {
-          path: "contacts",
-          // index: true,
-          children: [
-            {
-              path: "",
-              element: <Contacts closeClicked={() => { }} />,
-            }
-          ],
-        },
+        // {
+        //   path: "contacts",
+        //   // index: true,
+        //   children: [
+        //     {
+        //       path: "",
+        //       element: <Contacts closeClicked={() => { }} />,
+        //     }
+        //   ],
+        // },
         {
           path: "services",
           // index: true,

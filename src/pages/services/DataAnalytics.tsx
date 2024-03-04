@@ -15,6 +15,14 @@ const DataAnalytics = () => {
             <SectionSubTitle>INFORMED DECISION-MAKING</SectionSubTitle>
             <Paragraph>Data analytics empowers businesses to move beyond gut feelings by providing actionable insights derived from thorough data analysis. These insights serve as a roadmap for strategic planning, ensuring that every decision is supported by data-driven intelligence.</Paragraph>
 
+            <SectionSubTitle>Realtime decisions</SectionSubTitle>
+            <Paragraph>
+                Real-time data collection and reporting stand as indispensable pillars for informed decision-making. By harnessing cutting-edge technologies and robust analytics frameworks, we enable businesses to gather and analyze data in real-time, providing valuable insights at the speed of thought.
+            </Paragraph>
+            <Paragraph>
+                Whether it's monitoring customer interactions, tracking market trends, or optimizing operational efficiency, our solutions offer a dynamic and responsive approach to data analysis. With our emphasis on real-time data capabilities, businesses can swiftly adapt to changing conditions, identify emerging opportunities, and stay one step ahead in today's fast-paced digital landscape.
+            </Paragraph>
+
             <SectionSubTitle>IDENTIFYING TRENDS AND PATTERNS</SectionSubTitle>
             <Paragraph>Through advanced analytics techniques, businesses can uncover hidden trends and patterns within their data. Whether it's understanding consumer behavior, market trends, or operational inefficiencies, data analytics sheds light on valuable insights that enable proactive decision-making and agile adaptation to market changes.</Paragraph>
 

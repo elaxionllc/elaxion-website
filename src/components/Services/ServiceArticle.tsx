@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 
 export const Paragraph = styled('p')({
-    fontSize: "14px",
+    fontSize: "20px",
     fontWeight: 300,
     lineHeight: "25px",
 
@@ -26,8 +26,8 @@ export const SectionSubTitle = styled('h5')({
     textTransform: "uppercase",
     marginTop: '10px',
     marginBottom: "0px",
-    fontSize: "18px",
-    fontWeight: "300",
+    fontSize: "15px",
+    fontWeight: "500",
     lineHeight: "20px",
 })
 
