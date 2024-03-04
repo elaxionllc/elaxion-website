@@ -10,7 +10,7 @@ import Consulting from '../pages/services/Consulting'
 import DataAnalytics from '../pages/services/DataAnalytics'
 import Infrastructure from '../pages/services/Infrastructure'
 import Strategic from '../pages/services/Strategic'
-import Contacts from '../components/Contact/Contact'
+
 
 const Router = () => {
   const routes = useRoutes([
