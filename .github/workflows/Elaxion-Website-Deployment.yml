@@ -3,11 +3,11 @@ name: Elaxion LLC Website deployment
 on:
   push:
     branches:
-      - development
+      - main
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - development
+      - main
 
 jobs:
   build_and_deploy_job:
