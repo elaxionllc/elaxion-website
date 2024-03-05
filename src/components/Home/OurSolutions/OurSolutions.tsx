@@ -73,6 +73,10 @@ const ServiceItem = (
     lineHeight: "20px",
     textDecoration: "none",
 
+    "&:hover": {
+      textDecoration: 'underline',
+    }
+
   })
 
   return (

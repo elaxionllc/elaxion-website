@@ -96,12 +96,11 @@ const ServiceArticle = (
 
     const HomeLink = styled(Link)({
         color: "#475467",
-        fontWeight: 500,
         paddingRight: "10px",
         paddingLeft: '10px',
-        textDecoration: 'none',
+        
         ':hover': {
-            textDecoration: 'underline',
+            textDecoration: 'none',
         }
 
     })
